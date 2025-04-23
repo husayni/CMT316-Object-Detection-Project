@@ -26,8 +26,26 @@ This repository contains the code and resources for the Object Detection project
 ### Prerequisites
 
 - **Conda** (Miniconda or Anaconda) installed.  
-- GNU **make** (on Windows, use Git Bash, MSYS2/Cygwin, or WSL).  
-- **Python 3.9+** (managed via Conda).
+    > to install conda on windows: 
+    ```
+    wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" -outfile ".\Downloads\Miniconda3-latest-Windows-x86_64.exe"
+    ```
+    > Open The installer, make sure to check add to PATH option
+- **make** (on Windows, use Git Bash, MSYS2/Cygwin, or WSL). 
+    > to install make on windows Open Powershell with Administrator privileges and run: 
+    ```
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor  3072
+    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    ```
+    ```
+    choco install make -y
+    ```
+    Verify the installation:
+    ```
+    make --version
+    ```
+- **Python 3.8+** (managed via Conda).
 - **AWS Credentials** (Contact Hussain for it).
 
 ### Setup Development Environment
