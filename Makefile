@@ -25,7 +25,7 @@ endif
 
 download-data:
 	@echo "Downloading data..."
-	dvc pull
+	conda run -n objdet dvc pull
 	@echo "Data downloaded!"
 
 setup : create-env download-data

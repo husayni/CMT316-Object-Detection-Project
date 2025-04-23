@@ -28,6 +28,7 @@ This repository contains the code and resources for the Object Detection project
 - **Conda** (Miniconda or Anaconda) installed.  
 - GNU **make** (on Windows, use Git Bash, MSYS2/Cygwin, or WSL).  
 - **Python 3.9+** (managed via Conda).
+- **AWS Credentials** (Contact Hussain for it).
 
 ### Setup Development Environment
 
