@@ -15,7 +15,6 @@ This repository contains the code and resources for the Object Detection project
 ├── environment.yml         # Primary Conda environment definition
 ├── hello.py                # Example script
 ├── notebooks/              # Jupyter notebooks for analysis
-│   └── 01_EDA.ipynb        # Exploratory Data Analysis
 ├── scripts/                # Utility scripts (e.g. data ingestion, data splitting)
 └── src/                    # Application / library source code
 ```
@@ -30,28 +29,37 @@ This repository contains the code and resources for the Object Detection project
 - GNU **make** (on Windows, use Git Bash, MSYS2/Cygwin, or WSL).  
 - **Python 3.9+** (managed via Conda).
 
-### 1. Create & Activate Environment
+### Setup Development Environment
 
-Use the provided `Makefile` to spin up your Conda environment from `environment.yml`:
+Use the provided `Makefile` to spin up Development Environment:
 
 ```bash
-# Create the environment
-make create-env
+make setup
 
-# Activate it
 conda activate objdet
 ```
-### 2. Exporting Changes
+### Exporting Changes
 
-After you add or update dependencies, regenerate `environment.yml`:
+if you add or update dependencies, regenerate `environment.yml`:
 
 ```bash
 make export-env
 ```
 
-### 3. Create .env file
+### Create .env file
 
 Create a copy of `.env.sample` and rename it to `.env`.
+
+### Tracking New data with DVC
+
+Example Scenario: You have a new data folder (data/preprocessed) that you want to track with DVC.
+
+```bash
+dvc add data/preprocessed
+dvc push
+git add data/preprocessed.dvc .gitignore
+git commit -m "Track data/preprocessed with DVC"
+```
 
 ---
 
